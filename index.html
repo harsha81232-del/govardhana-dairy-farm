@@ -1,143 +1,132 @@
-// =========================================================================
-// REPLACE THIS EXACT JAVASCRIPT BLOCK IN YOUR SCRIPT TAG
-// Location: Inside the main <script> tag near the bottom of index.html
-// =========================================================================
+<!-- UPI PAYMENT SECTION -->
+<div id="upiPaymentSection">
 
-// MERCHANT CONFIGURATION
+    <h3>Pay with UPI</h3>
+
+    <label for="upiAmount">Amount (₹)</label>
+    <input
+        type="number"
+        id="upiAmount"
+        min="1"
+        step="0.01"
+        placeholder="Enter amount"
+    >
+
+    <p id="upiAmountError" style="display:none;">
+        Please enter a valid amount.
+    </p>
+
+    <button
+        type="button"
+        id="payNowBtn"
+        onclick="payWithUPI()"
+    >
+        Pay with UPI
+    </button>
+
+    <br><br>
+
+    <img
+        id="upiQrCodeImg"
+        width="200"
+        height="200"
+        alt="UPI QR Code"
+    >
+
+    <br>
+
+    <button
+        type="button"
+        onclick="copyUPIId()"
+    >
+        Copy UPI ID
+    </button>
+
+    <p id="copyMessage"></p>
+
+</div>
+
+<script>
 const MERCHANT_UPI_ID = "8867011865@ptyes";
 const MERCHANT_NAME = "Govardhana Dairy Farms";
 
-// Helper to format UPI URI parameters without breaking the @ in VPA/UPI ID
-function getFormattedUPIId() {
-    return MERCHANT_UPI_ID.trim();
-}
+/* Create UPI payment link */
+function createUPILink() {
+    const amount = document.getElementById("upiAmount").value.trim();
 
-// 1. Validate Amount Input (must be positive INR value)
-function validateUPIAmount() {
-    const amountInput = document.getElementById('upiAmount');
-    const payBtn = document.getElementById('payNowBtn');
-    const errorMsg = document.getElementById('upiAmountError');
-    if (!amountInput || !payBtn) return false;
-
-    const val = amountInput.value.trim();
-    const num = parseFloat(val);
-
-    if (val === "" || isNaN(num) || num <= 0) {
-        payBtn.disabled = true;
-        payBtn.classList.add('opacity-50', 'cursor-not-allowed');
-        payBtn.classList.remove('hover:bg-emerald-700');
-        
-        if (val !== "" && (isNaN(num) || num <= 0)) {
-            if (errorMsg) {
-                errorMsg.innerText = "Please enter a valid positive amount in INR (e.g. 60 or 100).";
-                errorMsg.classList.remove('hidden');
-            }
-        } else if (errorMsg) {
-            errorMsg.classList.add('hidden');
-        }
-        updateUPISummary();
-        return false;
+    if (!amount || Number(amount) <= 0) {
+        return null;
     }
 
-    if (errorMsg) errorMsg.classList.add('hidden');
-    payBtn.disabled = false;
-    payBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-    payBtn.classList.add('hover:bg-emerald-700');
-    updateUPISummary();
-    return true;
+    const params = new URLSearchParams({
+        pa: MERCHANT_UPI_ID,
+        pn: MERCHANT_NAME,
+        am: Number(amount).toFixed(2),
+        cu: "INR"
+    });
+
+    return "upi://pay?" + params.toString();
 }
 
-// 2. Build the standard upi://pay URI string
-function buildUPIPaymentURI() {
-    const amountInput = document.getElementById('upiAmount');
-    const noteInput = document.getElementById('upiNote');
-    if (!amountInput) return "";
+/* Pay button */
+function payWithUPI() {
+    const amountInput = document.getElementById("upiAmount");
+    const error = document.getElementById("upiAmountError");
 
-    const val = amountInput.value.trim();
-    const num = parseFloat(val);
-
-    if (val === "" || isNaN(num) || num <= 0) {
-        return "";
+    if (!amountInput.value || Number(amountInput.value) <= 0) {
+        error.style.display = "block";
+        return;
     }
 
-    // Crucial: pa must retain raw @ symbol for Android/iOS UPI app handlers
-    const pa = getFormattedUPIId(); 
-    const pn = encodeURIComponent(MERCHANT_NAME);
-    const am = encodeURIComponent(num.toFixed(2));
-    const cu = encodeURIComponent("INR");
-    const noteText = noteInput && noteInput.value.trim() ? noteInput.value.trim() : "Govardhana Dairy Purchase";
-    const tn = encodeURIComponent(noteText);
-    const tr = encodeURIComponent("GDF" + Date.now()); // Unique transaction ref
+    error.style.display = "none";
 
-    return `upi://pay?pa=${pa}&pn=${pn}&am=${am}&cu=${cu}&tn=${tn}&tr=${tr}`;
-}
+    const upiLink = createUPILink();
 
-// 3. Dynamically update QR code and payment summary
-function updateUPISummary() {
-    const amountInput = document.getElementById('upiAmount');
-    const summaryAmount = document.getElementById('summaryAmount');
-    const qrImg = document.getElementById('upiQrCodeImg');
-    
-    const val = amountInput ? amountInput.value.trim() : "";
-    const num = parseFloat(val);
-    const displayVal = (val !== "" && !isNaN(num) && num > 0) ? num.toFixed(2) : "0.00";
-
-    if (summaryAmount) {
-        summaryAmount.innerText = `₹${displayVal}`;
-    }
-
-    if (qrImg) {
-        const upiUri = buildUPIPaymentURI();
-        const fallbackUri = `upi://pay?pa=${getFormattedUPIId()}&pn=${encodeURIComponent(MERCHANT_NAME)}&cu=INR`;
-        const qrData = upiUri ? upiUri : fallbackUri;
-        qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrData)}`;
+    if (upiLink) {
+        window.location.href = upiLink;
     }
 }
 
-// 4. Trigger UPI App Launcher via 'Pay Now' Button
-function payWithUPIApp() {
-    if (!validateUPIAmount()) return;
+/* Update QR whenever amount changes */
+function updateUPIQR() {
+    const amount = document.getElementById("upiAmount").value.trim();
+    const qr = document.getElementById("upiQrCodeImg");
 
-    const upiUri = buildUPIPaymentURI();
-    if (!upiUri) return;
+    let upiLink;
 
-    // Launch mobile native UPI app chooser
-    window.location.href = upiUri;
-
-    // Show status notice for user guidance
-    const statusNotice = document.getElementById('upiStatusNotice');
-    if (statusNotice) {
-        statusNotice.classList.remove('hidden');
-    }
-}
-
-// 5. Copy UPI ID to Clipboard
-function copyUPIId() {
-    const upiId = getFormattedUPIId();
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(upiId).then(showCopySuccess).catch(fallbackCopy);
+    if (amount && Number(amount) > 0) {
+        upiLink = createUPILink();
     } else {
-        fallbackCopy();
+        const params = new URLSearchParams({
+            pa: MERCHANT_UPI_ID,
+            pn: MERCHANT_NAME,
+            cu: "INR"
+        });
+
+        upiLink = "upi://pay?" + params.toString();
     }
+
+    qr.src =
+        "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" +
+        encodeURIComponent(upiLink);
 }
 
-function fallbackCopy() {
-    const tempInput = document.createElement('input');
-    tempInput.value = getFormattedUPIId();
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand('copy');
-    document.body.removeChild(tempInput);
-    showCopySuccess();
+/* Copy UPI ID */
+function copyUPIId() {
+    navigator.clipboard.writeText(MERCHANT_UPI_ID)
+        .then(function() {
+            document.getElementById("copyMessage").innerText =
+                "UPI ID copied!";
+        })
+        .catch(function() {
+            document.getElementById("copyMessage").innerText =
+                "UPI ID: " + MERCHANT_UPI_ID;
+        });
 }
 
-function showCopySuccess() {
-    const copyBtnText = document.getElementById('copyBtnText');
-    if (copyBtnText) {
-        const originalText = copyBtnText.innerText;
-        copyBtnText.innerText = "Copied!";
-        setTimeout(() => {
-            copyBtnText.innerText = originalText;
-        }, 2000);
-    }
-}
+document
+    .getElementById("upiAmount")
+    .addEventListener("input", updateUPIQR);
+
+updateUPIQR();
+</script>
