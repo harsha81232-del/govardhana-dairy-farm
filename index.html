@@ -3,289 +3,484 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Govardhana Dairy Farms | Fresh Milk & Curd Direct to Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Govardhana Dairy Farms | Pure Farm-to-Home Dairy in Kolar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
+    <header class="header" id="header">
         <nav class="nav-container">
-            <a href="#home" class="logo">
-                <img src="images/logo.png" alt="Govardhana Dairy Farms Logo" class="logo-img">
-                <span class="logo-text">Govardhana Dairy</span>
+            <a href="#" class="logo-group">
+                <div class="logo-badge">🌿</div>
+                <div class="logo-text">
+                    <span class="brand-title">Govardhana</span>
+                    <span class="brand-subtitle">DAIRY FARMS</span>
+                </div>
             </a>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#products" class="nav-link">Products</a></li>
-                <li><a href="#pay-upi" class="nav-link">Pay UPI</a></li>
-                <li><a href="#special-offer" class="nav-link">Special Offer</a></li>
-                <li><a href="#support" class="nav-link">Support & Reviews</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#order" class="nav-link">Order Online</a>
+                <a href="#pay" class="nav-link">Pay UPI</a>
+                <a href="#offer" class="nav-link">Special Offer</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
 
             <div class="nav-actions">
-                <a href="#order" class="btn btn-primary nav-btn">Order Online</a>
-                <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                <button class="cart-trigger" id="cart-btn" aria-label="View Cart">
+                    🛒 <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <a href="#order" class="btn btn-gold nav-cta">ORDER NOW</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
                 </button>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <span class="location-badge">📍 Doddathammanahalli Village • Mulbagal Taluk • Kolar</span>
-                    <h1 class="hero-title">Fresh Milk & Curd Straight From Our Farm to Your Home</h1>
-                    <p class="hero-subtitle">Pure, fresh, and wholesome daily dairy products produced with dedicated care from Govardhana Dairy Farms.</p>
-                    <div class="hero-actions">
-                        <a href="#products" class="btn btn-primary">Order Now</a>
-                        <a href="#pay-upi" class="btn btn-secondary">Pay Online</a>
-                        <a href="https://wa.me/YOUR_BUSINESS_WHATSAPP_NUMBER" target="_blank" class="btn btn-outline" rel="noopener">WhatsApp Us</a>
-                    </div>
-                </div>
-                <div class="hero-image-wrapper">
-                    <img src="images/farm.jpg" alt="Govardhana Dairy Farm Cows and Environment" class="hero-image">
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=2000" alt="Govardhana Dairy Farm Landscape" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content container">
+            <div class="location-pill">
+                📍 DODDATHAMMANAHALLI VILLAGE • MULBAGAL TALUK • KOLAR
+            </div>
+            <h1 class="hero-title">Fresh Milk & Curd<br><em>Straight From Our Farm</em><br>to Your Home</h1>
+            <p class="hero-subtitle">Pure, fresh, and wholesome traditional dairy products harvested daily with love and hygiene from Govardhana Dairy Farms.</p>
+            <div class="hero-btn-group">
+                <a href="#products" class="btn btn-gold">ORDER FRESH MILK</a>
+                <a href="#products" class="btn btn-outline">VIEW PRODUCTS</a>
+            </div>
+            <div class="trust-badges">
+                <div class="trust-item"><span>✓</span> Farm Fresh</div>
+                <div class="trust-item"><span>✓</span> Locally Produced</div>
+                <div class="trust-item"><span>✓</span> Freshly Delivered</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about section-padding" id="about">
+        <div class="container grid-2">
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=format&fit=crop&q=80&w=1000" alt="Fresh Dairy Farming" class="about-img main-img">
+                <div class="about-experience-card">
+                    <span class="exp-num">100%</span>
+                    <span class="exp-text">Pure & Unadulterated</span>
                 </div>
             </div>
-        </section>
-
-        <section id="about" class="about section-padding">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2>From Our Farm to Your Family</h2>
-                    <p>Dedicated to delivering unadulterated quality, absolute freshness, and complete hygiene.</p>
-                </div>
+            <div class="about-content">
+                <span class="section-badge">ABOUT OUR FARM</span>
+                <h2 class="section-title">From Our Farm to Your Family</h2>
+                <p class="section-desc">At Govardhana Dairy Farms, we believe great dairy products begin with ethical care, pristine cleanliness, and uncompromised freshness. Our milk and curd are produced daily with absolute hygienic standards and delivered fresh to households in our local community.</p>
                 
-                <div class="about-grid">
-                    <div class="about-card">
-                        <div class="icon">🥛</div>
-                        <h3>Farm-Fresh Milk</h3>
-                        <p>Directly sourced from our healthy cows every single morning to guarantee pure taste and optimal nutritional value.</p>
-                    </div>
-                    <div class="about-card">
-                        <div class="icon">✨</div>
-                        <h3>Focus on Cleanliness</h3>
-                        <p>Maintained under strict hygiene protocols during milking, processing, and packaging stages.</p>
-                    </div>
-                    <div class="about-card">
-                        <div class="icon">🚚</div>
-                        <h3>Local Delivery</h3>
-                        <p>Prompt morning supply ensuring fresh dairy arrives at your doorstep when you need it most.</p>
-                    </div>
-                </div>
-
-                <div class="about-banner">
-                    <img src="images/farm.jpg" alt="Govardhana Farm Overview" class="about-image">
-                </div>
-            </div>
-        </section>
-
-        <section id="products" class="products section-padding">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2>Our Fresh Dairy Products</h2>
-                    <p>Select your items below to add them to your cart.</p>
-                </div>
-
-                <div class="product-grid" id="productGrid">
-                    </div>
-            </div>
-        </section>
-
-        <section id="order" class="order-section section-padding">
-            <div class="container">
-                <div class="order-grid">
-                    
-                    <div class="cart-wrapper">
-                        <h3>Your Shopping Cart</h3>
-                        <div class="cart-items" id="cartItems">
-                            <p class="empty-cart-msg">Your cart is currently empty.</p>
-                        </div>
-                        <div class="cart-summary">
-                            <div class="summary-line"><span>Subtotal</span><span id="subtotalAmount">₹0.00</span></div>
-                            <div class="summary-line"><span>Delivery Charge</span><span id="deliveryAmount">₹0.00</span></div>
-                            <hr class="divider">
-                            <div class="summary-line total"><span>Total</span><span id="totalAmount">₹0.00</span></div>
+                <div class="feature-list">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <div>
+                            <h4>Farm-Fresh Milk</h4>
+                            <p>Naturally nutritious dairy products prepared without artificial additives or preservatives.</p>
                         </div>
                     </div>
-
-                    <div class="form-wrapper">
-                        <h3>Delivery Details</h3>
-                        <form id="checkoutForm" novalidate>
-                            <div class="form-group">
-                                <label for="custName">Full Name *</label>
-                                <input type="text" id="custName" required placeholder="Enter your full name">
-                            </div>
-                            <div class="form-group">
-                                <label for="custMobile">Mobile Number *</label>
-                                <input type="tel" id="custMobile" pattern="[0-9]{10}" required placeholder="10-digit mobile number">
-                            </div>
-                            <div class="form-group">
-                                <label for="custAddress">Delivery Address *</label>
-                                <textarea id="custAddress" rows="2" required placeholder="House No., Street Name"></textarea>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="custVillage">Village / Area *</label>
-                                    <input type="text" id="custVillage" required placeholder="Village or Area name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="custPincode">Pincode *</label>
-                                    <input type="text" id="custPincode" pattern="[0-9]{6}" required placeholder="6-digit pincode">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="custInstructions">Special Instructions (Optional)</label>
-                                <input type="text" id="custInstructions" placeholder="e.g. Leave near the gate, call before delivery">
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-full">Place Order via WhatsApp</button>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="pay-upi" class="pay-upi section-padding">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2>Secure Online Payment</h2>
-                    <p>Pay quickly using UPI applications or integrated payment channels.</p>
-                </div>
-
-                <div class="pay-card">
-                    <div class="upi-box">
-                        <h3>Quick UPI Payment</h3>
-                        <p>Scan or send payment to our UPI ID:</p>
-                        <div class="upi-id-badge">
-                            <span id="upiId">govardhana@upi</span>
-                            <button class="btn-copy" id="copyUpiBtn">Copy UPI ID</button>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <div>
+                            <h4>Clean & Hygienic</h4>
+                            <p>Strict sanitization protocols maintained during every step of milking and handling.</p>
                         </div>
-                        <div class="qr-placeholder">
-                            <p>[ QR Code Placeholder ]</p>
-                        </div>
-                        <button class="btn btn-secondary btn-full" id="payViaUpiAppBtn">Pay via Installed UPI App</button>
                     </div>
-
-                    <div class="gateway-box">
-                        <h3>Card / Netbanking Checkout</h3>
-                        <p>Proceed to a secure checkout gateway for verified digital transactions.</p>
-                        <div class="payment-summary-display">
-                            <p>Order Reference: <strong id="payOrderRef">#GD-PENDING</strong></p>
-                            <p>Amount Payable: <strong id="payOrderAmount">₹0.00</strong></p>
-                        </div>
-                        <button class="btn btn-primary btn-full" id="payGatewayBtn">Pay Online (Card / Netbanking)</button>
-                        <small class="security-note">🔒 Payments processed securely. Backend integration safely handled on secure servers.</small>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="special-offer" class="special-offer section-padding">
-            <div class="container">
-                <div class="offer-card">
-                    <div class="offer-badge">Limited Time Offer</div>
-                    <h2 class="offer-title">Freshness Delivered to Your Door</h2>
-                    <p class="offer-desc">Subscribe to daily morning fresh milk deliveries and get free home delivery for your first month!</p>
-                    <div class="offer-details">
-                        <span><strong>Product:</strong> Fresh Cow Milk</span>
-                        <span><strong>Validity:</strong> Contact for active terms</span>
-                    </div>
-                    <a href="#products" class="btn btn-primary">Order Now</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="support" class="support section-padding">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2>Need Help & Customer Reviews</h2>
-                </div>
-
-                <div class="support-grid">
-                    <div class="contact-info-card">
-                        <h3>Need Help?</h3>
-                        <p>Have questions about deliveries or custom orders? Reach out directly.</p>
-                        <ul class="contact-list">
-                            <li>📞 <strong>Phone:</strong> <a href="tel:YOUR_PHONE_NUMBER">Add Phone Number</a></li>
-                            <li>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/YOUR_BUSINESS_WHATSAPP_NUMBER" target="_blank" rel="noopener">Add WhatsApp Link</a></li>
-                            <li>✉️ <strong>Email:</strong> <a href="mailto:info@govardhanadairy.com">info@govardhanadairy.com</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="reviews-container">
-                        <h3>Customer Feedback</h3>
-                        <div class="review-cards">
-                            <div class="review-card">
-                                <div class="stars">★★★★★</div>
-                                <p class="review-text">"Fresh and good quality dairy products. The morning delivery is always prompt."</p>
-                                <span class="review-author">- Local Resident</span>
-                            </div>
-                            <div class="review-card">
-                                <div class="stars">★★★★★</div>
-                                <p class="review-text">"The curd quality is thick and natural. Highly recommended for families in the area."</p>
-                                <span class="review-author">- Satisfied Customer</span>
-                            </div>
-                        </div>
-                        <button class="btn btn-outline" id="reviewBtn">Leave a Review</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact section-padding">
-            <div class="container">
-                <div class="contact-wrapper">
-                    <div class="contact-details">
-                        <h2>Govardhana Dairy Farms</h2>
-                        <address class="address-block">
-                            Doddathammanahalli Village,<br>
-                            Mulbagal Taluk,<br>
-                            Kolar District,<br>
-                            Karnataka, India
-                        </address>
-                        <div class="contact-actions">
-                            <a href="tel:YOUR_PHONE_NUMBER" class="btn btn-primary">Call Us</a>
-                            <a href="https://wa.me/YOUR_BUSINESS_WHATSAPP_NUMBER" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp</a>
-                            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-outline">Get Directions</a>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚚</div>
+                        <div>
+                            <h4>Local Delivery</h4>
+                            <p>Prompt morning deliveries ensuring peak freshness on your breakfast table.</p>
                         </div>
                     </div>
                 </div>
+                <a href="#contact" class="btn btn-green">LEARN MORE</a>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section class="stats-banner">
+        <div class="container grid-3">
+            <div class="stat-card">
+                <div class="stat-icon">🥛</div>
+                <h3>FARM FRESH</h3>
+                <p>Harvested & Packed Daily</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏡</div>
+                <h3>LOCAL DELIVERY</h3>
+                <p>Doorstep Service in Kolar</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🛡️</div>
+                <h3>QUALITY FIRST</h3>
+                <p>100% Pure Guarantee</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products section-padding" id="products">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">OUR PRODUCTS</span>
+                <h2 class="section-title">Freshness You Can Taste</h2>
+                <p class="section-subtitle">Simple, pure, and wholesome daily dairy essentials straight from our farm.</p>
+            </div>
+
+            <div class="products-grid grid-3">
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <span class="category-badge">Bestseller</span>
+                        <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=800" alt="Fresh Cow Milk" class="product-img">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Fresh Cow Milk</h3>
+                        <p class="product-desc">Pure, unpasteurized, farm-fresh milk rich in natural nutrients and creaminess.</p>
+                        <div class="product-price-row">
+                            <span class="price">₹60 <small>/ Litre</small></span>
+                            <div class="qty-selector">
+                                <button class="qty-btn" onclick="adjustQty('milk-qty', -1)">-</button>
+                                <input type="number" id="milk-qty" value="1" min="1" readonly>
+                                <button class="qty-btn" onclick="adjustQty('milk-qty', 1)">+</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-green btn-block" onclick="addToCart('Fresh Cow Milk', 60, 'milk-qty', 'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=200')">ADD TO CART</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <span class="category-badge">Traditional</span>
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=800" alt="Fresh Curd" class="product-img">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Fresh Curd</h3>
+                        <p class="product-desc">Thick, creamy, and naturally set curd crafted using traditional fermentation methods.</p>
+                        <div class="product-price-row">
+                            <span class="price">₹70 <small>/ Kg</small></span>
+                            <div class="qty-selector">
+                                <button class="qty-btn" onclick="adjustQty('curd-qty', -1)">-</button>
+                                <input type="number" id="curd-qty" value="1" min="1" readonly>
+                                <button class="qty-btn" onclick="adjustQty('curd-qty', 1)">+</button>
+                            </div>
+                        </div>
+                        <button class="btn btn-green btn-block" onclick="addToCart('Fresh Curd', 70, 'curd-qty', 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=200')">ADD TO CART</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <span class="category-badge">Special</span>
+                        <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&q=80&w=800" alt="Special Dairy Products" class="product-img">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Special Dairy Products</h3>
+                        <p class="product-desc">Seasonal farm specials including artisanal butter, paneer, and clarified ghee.</p>
+                        <div class="product-price-row">
+                            <span class="price">Custom <small>Pricing</small></span>
+                        </div>
+                        <a href="#contact" class="btn btn-outline-dark btn-block">INQUIRE PRICE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer-banner section-padding" id="offer">
+        <div class="container grid-2 align-center">
+            <div class="offer-content">
+                <span class="offer-tag">LIMITED TIME SPECIAL OFFER</span>
+                <h2 class="offer-title">Freshness Delivered to Your Home at Special Rates</h2>
+                <p>Subscribe to our daily morning delivery service and enjoy uncompromised purity at your doorstep every morning.</p>
+                <div class="offer-price-box">
+                    <span class="offer-label">Fresh Cow Milk Subscription</span>
+                    <span class="offer-val">₹58 <small>/ Litre</small></span>
+                </div>
+                <a href="#order" class="btn btn-gold">CLAIM OFFER NOW</a>
+            </div>
+            <div class="offer-img-box">
+                <img src="https://images.unsplash.com/photo-1528498033373-3c6c08e93d79?auto=format&fit=crop&q=80&w=800" alt="Special Dairy Offer" class="offer-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="order-section section-padding" id="order">
+        <div class="container grid-2">
+            <div class="order-info">
+                <span class="section-badge">EASY DOORSTEP DELIVERY</span>
+                <h2 class="section-title">Fresh Dairy,<br>Delivered to Your Door</h2>
+                <p class="section-desc">Place your order directly with our farm team. Fill in your details below to generate an instant WhatsApp order receipt.</p>
+                <div class="order-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&q=80&w=800" alt="Farm Fresh Delivery" class="order-img">
+                </div>
+            </div>
+
+            <div class="order-form-container">
+                <form id="whatsapp-form" onsubmit="handleWhatsAppOrder(event)">
+                    <h3>Order Details</h3>
+                    <div class="form-group">
+                        <label for="cust-name">Customer Name</label>
+                        <input type="text" id="cust-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cust-phone">Mobile Number</label>
+                        <input type="tel" id="cust-phone" placeholder="Enter 10-digit mobile number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cust-address">Delivery Address</label>
+                        <textarea id="cust-address" rows="2" placeholder="House no, Street, Landmark" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cust-village">Village / Area</label>
+                            <input type="text" id="cust-village" placeholder="e.g. Mulbagal" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cust-pin">Pincode</label>
+                            <input type="text" id="cust-pin" placeholder="563131" required>
+                        </div>
+                    </div>
+
+                    <div class="order-summary-box">
+                        <h4>Selected Items</h4>
+                        <div id="form-summary-items">
+                            <p class="empty-msg">No items added to cart yet. Add items above or select below.</p>
+                        </div>
+                        <div class="summary-line">
+                            <span>Delivery Fee</span>
+                            <span class="text-green">FREE</span>
+                        </div>
+                        <div class="summary-line total-line">
+                            <span>Total Amount</span>
+                            <span id="form-total-val">₹0</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-whatsapp btn-block">
+                        <span>💬</span> PLACE ORDER ON WHATSAPP
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="pay-section section-padding" id="pay">
+        <div class="container">
+            <div class="pay-card-wrapper">
+                <div class="pay-header text-center">
+                    <span class="section-badge">SECURE PAYMENTS</span>
+                    <h2 class="section-title">Quick & Easy Online Payment</h2>
+                    <p>Pay securely for your daily dairy subscription or orders via UPI.</p>
+                </div>
+
+                <div class="pay-body grid-2">
+                    <div class="pay-form">
+                        <div class="form-group">
+                            <label for="pay-amount">Order Amount (₹)</label>
+                            <input type="number" id="pay-amount" placeholder="Enter Amount" value="100" onchange="updateUPISummary()">
+                        </div>
+                        <div class="form-group">
+                            <label for="pay-name">Customer Name</label>
+                            <input type="text" id="pay-name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="pay-id">Order Reference / Note</label>
+                            <input type="text" id="pay-id" placeholder="e.g. Milk Subscription Oct">
+                        </div>
+                        <div class="pay-buttons">
+                            <button class="btn btn-green btn-block" onclick="processPayment('Razorpay/Card')">PAY ONLINE</button>
+                            <button class="btn btn-gold btn-block" onclick="processPayment('UPI')">PAY WITH UPI</button>
+                        </div>
+                        <p class="security-note">🔒 Secure 256-bit Encrypted Payment Gateway Integration Ready</p>
+                    </div>
+
+                    <div class="pay-summary-box">
+                        <h3>Payment Receipt Preview</h3>
+                        <div class="receipt-row">
+                            <span>Merchant:</span>
+                            <strong>Govardhana Dairy Farms</strong>
+                        </div>
+                        <div class="receipt-row">
+                            <span>Location:</span>
+                            <span>Kolar, Karnataka</span>
+                        </div>
+                        <div class="receipt-row">
+                            <span>Amount:</span>
+                            <strong id="receipt-amount" class="text-green">₹100.00</strong>
+                        </div>
+                        <div class="upi-qr-placeholder">
+                            <div class="qr-box">
+                                <span>📱</span>
+                                <p>UPI QR Generated On Checkout</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">OUR COMMITMENT</span>
+                <h2 class="section-title">Why Choose Govardhana Dairy?</h2>
+            </div>
+            <div class="grid-4">
+                <div class="why-card">
+                    <div class="why-icon">🌱</div>
+                    <h3>Farm Fresh</h3>
+                    <p>Directly sourced from healthy cows cared for in natural surroundings.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🥛</div>
+                    <h3>Fresh Dairy</h3>
+                    <p>Zero preservatives, pure natural taste, and essential health nutrients.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">✓</div>
+                    <h3>Quality Focused</h3>
+                    <p>Rigorous cleanliness and sanitization standard checks every morning.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🚚</div>
+                    <h3>Local Delivery</h3>
+                    <p>Dependable distribution network across Doddathammanahalli & Kolar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews section-padding" id="reviews">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-badge">SUPPORT & REVIEWS</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+            </div>
+            <div class="grid-3">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"The freshness of milk from Govardhana Dairy is unmatched. Reminds me of pure home-farmed milk from my childhood."</p>
+                    <div class="reviewer">- Editable Customer Feedback</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Thick curd and pristine quality milk delivered on time every single morning in Mulbagal. Truly reliable!"</p>
+                    <div class="reviewer">- Local Resident</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Super clean handling and authentic taste. We have subscribed for 3 months now and love the quality."</p>
+                    <div class="reviewer">- Satisfied Customer</div>
+                </div>
+            </div>
+            <div class="text-center review-btn-wrapper">
+                <button class="btn btn-outline-dark" onclick="alert('Review submission portal opens here.')">LEAVE A REVIEW</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section-padding" id="contact">
+        <div class="container grid-2 align-center">
+            <div class="contact-info">
+                <span class="section-badge">GET IN TOUCH</span>
+                <h2 class="section-title">Come Visit Our Farm</h2>
+                <p class="contact-address">
+                    <strong>Govardhana Dairy Farms</strong><br>
+                    Doddathammanahalli Village,<br>
+                    Mulbagal Taluk, Kolar District,<br>
+                    Karnataka, India.
+                </p>
+                <div class="contact-actions">
+                    <a href="tel:YOUR_PHONE_NUMBER" class="btn btn-green">📞 CALL US</a>
+                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="btn btn-whatsapp">💬 WHATSAPP</a>
+                    <a href="YOUR_MAP_LINK" target="_blank" class="btn btn-outline-dark">📍 GET DIRECTIONS</a>
+                </div>
+            </div>
+            <div class="contact-img-box">
+                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=800" alt="Govardhana Farm Location" class="contact-img">
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-about">
-                <h3>Govardhana Dairy Farms</h3>
-                <p>Fresh, clean, and natural daily dairy products brought directly from our farm to your doorstep.</p>
+        <div class="container grid-4">
+            <div class="footer-col brand-col">
+                <div class="logo-group">
+                    <div class="logo-badge">🌿</div>
+                    <div class="logo-text text-white">
+                        <span class="brand-title">Govardhana</span>
+                        <span class="brand-subtitle">DAIRY FARMS</span>
+                    </div>
+                </div>
+                <p>Fresh dairy products, straight from our farm to your home with uncompromised quality and care.</p>
             </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
+            <div class="footer-col">
+                <h4>QUICK LINKS</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#order">Order Online</a></li>
-                    <li><a href="#pay-upi">Pay UPI</a></li>
+                    <li><a href="#pay">Pay UPI</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+            </div>
+            <div class="footer-col">
+                <h4>CONTACT</h4>
+                <p>📍 Doddathammanahalli Village, Mulbagal Taluk, Kolar, Karnataka</p>
+                <p>📞 Phone: YOUR_PHONE_NUMBER</p>
+                <p>💬 WhatsApp: YOUR_WHATSAPP_NUMBER</p>
+            </div>
+            <div class="footer-col">
+                <h4>CONNECT</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">YouTube</a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom text-center">
             <p>&copy; 2026 Govardhana Dairy Farms. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <div class="cart-drawer-overlay" id="cart-overlay" onclick="closeCart()"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Fresh Cart 🥛</h3>
+            <button class="cart-close-btn" onclick="closeCart()">&times;</button>
+        </div>
+        <div class="cart-body" id="cart-items-container">
+            <p class="empty-msg">Your shopping cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary-line">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">₹0</span>
+            </div>
+            <div class="cart-summary-line">
+                <span>Delivery</span>
+                <span class="text-green">FREE</span>
+            </div>
+            <div class="cart-summary-line cart-total">
+                <span>Total Amount</span>
+                <span id="cart-total">₹0</span>
+            </div>
+            <a href="#order" class="btn btn-gold btn-block" onclick="closeCart()">PROCEED TO ORDER</a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
