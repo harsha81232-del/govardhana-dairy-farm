@@ -1,487 +1,859 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Govardhana Dairy Farms | Pure Farm-to-Home Dairy in Kolar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Govardhana Dairy Farms | Fresh Milk & Curd in Mulbagal, Kolar</title>
+    <meta name="description" content="Govardhana Dairy Farms provides fresh, quality farm milk and curd in Doddathammanahalli, Mulbagal, Kolar. Milk from ₹30 and curd from ₹35. Contact us today.">
+    <meta name="keywords" content="fresh milk in Mulbagal, fresh curd in Mulbagal, farm fresh milk Kolar, fresh cow milk near Mulbagal, fresh curd near Mulbagal, Govardhana Dairy Farms, fresh milk Doddathammanahalli">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        milk: '#F9FBFD',
+                        cream: '#FDFBF7',
+                        farmGreen: '#2D6A4F',
+                        farmGreenLight: '#40916C',
+                        farmDark: '#1B4332',
+                        earthGold: '#D4A373',
+                        earthBrown: '#8C6239',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, .font-serif-custom {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(27, 67, 50, 0.75), rgba(27, 67, 50, 0.65)), url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-cream text-gray-800 antialiased selection:bg-farmGreen selection:text-white">
 
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <a href="#" class="logo-group">
-                <div class="logo-badge">🌿</div>
-                <div class="logo-text">
-                    <span class="brand-title">Govardhana</span>
-                    <span class="brand-subtitle">DAIRY FARMS</span>
-                </div>
-            </a>
-
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#products" class="nav-link">Products</a>
-                <a href="#order" class="nav-link">Order Online</a>
-                <a href="#pay" class="nav-link">Pay UPI</a>
-                <a href="#offer" class="nav-link">Special Offer</a>
-                <a href="#reviews" class="nav-link">Reviews</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-
-            <div class="nav-actions">
-                <button class="cart-trigger" id="cart-btn" aria-label="View Cart">
-                    🛒 <span class="cart-count" id="cart-count">0</span>
-                </button>
-                <a href="#order" class="btn btn-gold nav-cta">ORDER NOW</a>
-                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </nav>
-    </header>
-
-    <section class="hero" id="home">
-        <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=2000" alt="Govardhana Dairy Farm Landscape" class="hero-img">
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="hero-content container">
-            <div class="location-pill">
-                📍 DODDATHAMMANAHALLI VILLAGE • MULBAGAL TALUK • KOLAR
-            </div>
-            <h1 class="hero-title">Fresh Milk & Curd<br><em>Straight From Our Farm</em><br>to Your Home</h1>
-            <p class="hero-subtitle">Pure, fresh, and wholesome traditional dairy products harvested daily with love and hygiene from Govardhana Dairy Farms.</p>
-            <div class="hero-btn-group">
-                <a href="#products" class="btn btn-gold">ORDER FRESH MILK</a>
-                <a href="#products" class="btn btn-outline">VIEW PRODUCTS</a>
-            </div>
-            <div class="trust-badges">
-                <div class="trust-item"><span>✓</span> Farm Fresh</div>
-                <div class="trust-item"><span>✓</span> Locally Produced</div>
-                <div class="trust-item"><span>✓</span> Freshly Delivered</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about section-padding" id="about">
-        <div class="container grid-2">
-            <div class="about-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=format&fit=crop&q=80&w=1000" alt="Fresh Dairy Farming" class="about-img main-img">
-                <div class="about-experience-card">
-                    <span class="exp-num">100%</span>
-                    <span class="exp-text">Pure & Unadulterated</span>
-                </div>
-            </div>
-            <div class="about-content">
-                <span class="section-badge">ABOUT OUR FARM</span>
-                <h2 class="section-title">From Our Farm to Your Family</h2>
-                <p class="section-desc">At Govardhana Dairy Farms, we believe great dairy products begin with ethical care, pristine cleanliness, and uncompromised freshness. Our milk and curd are produced daily with absolute hygienic standards and delivered fresh to households in our local community.</p>
-                
-                <div class="feature-list">
-                    <div class="feature-card">
-                        <div class="feature-icon">🌿</div>
-                        <div>
-                            <h4>Farm-Fresh Milk</h4>
-                            <p>Naturally nutritious dairy products prepared without artificial additives or preservatives.</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">✨</div>
-                        <div>
-                            <h4>Clean & Hygienic</h4>
-                            <p>Strict sanitization protocols maintained during every step of milking and handling.</p>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🚚</div>
-                        <div>
-                            <h4>Local Delivery</h4>
-                            <p>Prompt morning deliveries ensuring peak freshness on your breakfast table.</p>
-                        </div>
-                    </div>
-                </div>
-                <a href="#contact" class="btn btn-green">LEARN MORE</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="stats-banner">
-        <div class="container grid-3">
-            <div class="stat-card">
-                <div class="stat-icon">🥛</div>
-                <h3>FARM FRESH</h3>
-                <p>Harvested & Packed Daily</p>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon">🏡</div>
-                <h3>LOCAL DELIVERY</h3>
-                <p>Doorstep Service in Kolar</p>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon">🛡️</div>
-                <h3>QUALITY FIRST</h3>
-                <p>100% Pure Guarantee</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="products section-padding" id="products">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-badge">OUR PRODUCTS</span>
-                <h2 class="section-title">Freshness You Can Taste</h2>
-                <p class="section-subtitle">Simple, pure, and wholesome daily dairy essentials straight from our farm.</p>
-            </div>
-
-            <div class="products-grid grid-3">
-                <div class="product-card">
-                    <div class="product-img-wrapper">
-                        <span class="category-badge">Bestseller</span>
-                        <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=800" alt="Fresh Cow Milk" class="product-img">
-                    </div>
-                    <div class="product-details">
-                        <h3 class="product-title">Fresh Cow Milk</h3>
-                        <p class="product-desc">Pure, unpasteurized, farm-fresh milk rich in natural nutrients and creaminess.</p>
-                        <div class="product-price-row">
-                            <span class="price">₹60 <small>/ Litre</small></span>
-                            <div class="qty-selector">
-                                <button class="qty-btn" onclick="adjustQty('milk-qty', -1)">-</button>
-                                <input type="number" id="milk-qty" value="1" min="1" readonly>
-                                <button class="qty-btn" onclick="adjustQty('milk-qty', 1)">+</button>
-                            </div>
-                        </div>
-                        <button class="btn btn-green btn-block" onclick="addToCart('Fresh Cow Milk', 60, 'milk-qty', 'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=200')">ADD TO CART</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-img-wrapper">
-                        <span class="category-badge">Traditional</span>
-                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=800" alt="Fresh Curd" class="product-img">
-                    </div>
-                    <div class="product-details">
-                        <h3 class="product-title">Fresh Curd</h3>
-                        <p class="product-desc">Thick, creamy, and naturally set curd crafted using traditional fermentation methods.</p>
-                        <div class="product-price-row">
-                            <span class="price">₹70 <small>/ Kg</small></span>
-                            <div class="qty-selector">
-                                <button class="qty-btn" onclick="adjustQty('curd-qty', -1)">-</button>
-                                <input type="number" id="curd-qty" value="1" min="1" readonly>
-                                <button class="qty-btn" onclick="adjustQty('curd-qty', 1)">+</button>
-                            </div>
-                        </div>
-                        <button class="btn btn-green btn-block" onclick="addToCart('Fresh Curd', 70, 'curd-qty', 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=200')">ADD TO CART</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-img-wrapper">
-                        <span class="category-badge">Special</span>
-                        <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&q=80&w=800" alt="Special Dairy Products" class="product-img">
-                    </div>
-                    <div class="product-details">
-                        <h3 class="product-title">Special Dairy Products</h3>
-                        <p class="product-desc">Seasonal farm specials including artisanal butter, paneer, and clarified ghee.</p>
-                        <div class="product-price-row">
-                            <span class="price">Custom <small>Pricing</small></span>
-                        </div>
-                        <a href="#contact" class="btn btn-outline-dark btn-block">INQUIRE PRICE</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="offer-banner section-padding" id="offer">
-        <div class="container grid-2 align-center">
-            <div class="offer-content">
-                <span class="offer-tag">LIMITED TIME SPECIAL OFFER</span>
-                <h2 class="offer-title">Freshness Delivered to Your Home at Special Rates</h2>
-                <p>Subscribe to our daily morning delivery service and enjoy uncompromised purity at your doorstep every morning.</p>
-                <div class="offer-price-box">
-                    <span class="offer-label">Fresh Cow Milk Subscription</span>
-                    <span class="offer-val">₹58 <small>/ Litre</small></span>
-                </div>
-                <a href="#order" class="btn btn-gold">CLAIM OFFER NOW</a>
-            </div>
-            <div class="offer-img-box">
-                <img src="https://images.unsplash.com/photo-1528498033373-3c6c08e93d79?auto=format&fit=crop&q=80&w=800" alt="Special Dairy Offer" class="offer-img">
-            </div>
-        </div>
-    </section>
-
-    <section class="order-section section-padding" id="order">
-        <div class="container grid-2">
-            <div class="order-info">
-                <span class="section-badge">EASY DOORSTEP DELIVERY</span>
-                <h2 class="section-title">Fresh Dairy,<br>Delivered to Your Door</h2>
-                <p class="section-desc">Place your order directly with our farm team. Fill in your details below to generate an instant WhatsApp order receipt.</p>
-                <div class="order-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&q=80&w=800" alt="Farm Fresh Delivery" class="order-img">
-                </div>
-            </div>
-
-            <div class="order-form-container">
-                <form id="whatsapp-form" onsubmit="handleWhatsAppOrder(event)">
-                    <h3>Order Details</h3>
-                    <div class="form-group">
-                        <label for="cust-name">Customer Name</label>
-                        <input type="text" id="cust-name" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cust-phone">Mobile Number</label>
-                        <input type="tel" id="cust-phone" placeholder="Enter 10-digit mobile number" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cust-address">Delivery Address</label>
-                        <textarea id="cust-address" rows="2" placeholder="House no, Street, Landmark" required></textarea>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="cust-village">Village / Area</label>
-                            <input type="text" id="cust-village" placeholder="e.g. Mulbagal" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="cust-pin">Pincode</label>
-                            <input type="text" id="cust-pin" placeholder="563131" required>
-                        </div>
-                    </div>
-
-                    <div class="order-summary-box">
-                        <h4>Selected Items</h4>
-                        <div id="form-summary-items">
-                            <p class="empty-msg">No items added to cart yet. Add items above or select below.</p>
-                        </div>
-                        <div class="summary-line">
-                            <span>Delivery Fee</span>
-                            <span class="text-green">FREE</span>
-                        </div>
-                        <div class="summary-line total-line">
-                            <span>Total Amount</span>
-                            <span id="form-total-val">₹0</span>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn btn-whatsapp btn-block">
-                        <span>💬</span> PLACE ORDER ON WHATSAPP
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <section class="pay-section section-padding" id="pay">
-        <div class="container">
-            <div class="pay-card-wrapper">
-                <div class="pay-header text-center">
-                    <span class="section-badge">SECURE PAYMENTS</span>
-                    <h2 class="section-title">Quick & Easy Online Payment</h2>
-                    <p>Pay securely for your daily dairy subscription or orders via UPI.</p>
-                </div>
-
-                <div class="pay-body grid-2">
-                    <div class="pay-form">
-                        <div class="form-group">
-                            <label for="pay-amount">Order Amount (₹)</label>
-                            <input type="number" id="pay-amount" placeholder="Enter Amount" value="100" onchange="updateUPISummary()">
-                        </div>
-                        <div class="form-group">
-                            <label for="pay-name">Customer Name</label>
-                            <input type="text" id="pay-name" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <label for="pay-id">Order Reference / Note</label>
-                            <input type="text" id="pay-id" placeholder="e.g. Milk Subscription Oct">
-                        </div>
-                        <div class="pay-buttons">
-                            <button class="btn btn-green btn-block" onclick="processPayment('Razorpay/Card')">PAY ONLINE</button>
-                            <button class="btn btn-gold btn-block" onclick="processPayment('UPI')">PAY WITH UPI</button>
-                        </div>
-                        <p class="security-note">🔒 Secure 256-bit Encrypted Payment Gateway Integration Ready</p>
-                    </div>
-
-                    <div class="pay-summary-box">
-                        <h3>Payment Receipt Preview</h3>
-                        <div class="receipt-row">
-                            <span>Merchant:</span>
-                            <strong>Govardhana Dairy Farms</strong>
-                        </div>
-                        <div class="receipt-row">
-                            <span>Location:</span>
-                            <span>Kolar, Karnataka</span>
-                        </div>
-                        <div class="receipt-row">
-                            <span>Amount:</span>
-                            <strong id="receipt-amount" class="text-green">₹100.00</strong>
-                        </div>
-                        <div class="upi-qr-placeholder">
-                            <div class="qr-box">
-                                <span>📱</span>
-                                <p>UPI QR Generated On Checkout</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="why-us section-padding">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-badge">OUR COMMITMENT</span>
-                <h2 class="section-title">Why Choose Govardhana Dairy?</h2>
-            </div>
-            <div class="grid-4">
-                <div class="why-card">
-                    <div class="why-icon">🌱</div>
-                    <h3>Farm Fresh</h3>
-                    <p>Directly sourced from healthy cows cared for in natural surroundings.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">🥛</div>
-                    <h3>Fresh Dairy</h3>
-                    <p>Zero preservatives, pure natural taste, and essential health nutrients.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">✓</div>
-                    <h3>Quality Focused</h3>
-                    <p>Rigorous cleanliness and sanitization standard checks every morning.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">🚚</div>
-                    <h3>Local Delivery</h3>
-                    <p>Dependable distribution network across Doddathammanahalli & Kolar.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="reviews section-padding" id="reviews">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="section-badge">SUPPORT & REVIEWS</span>
-                <h2 class="section-title">What Our Customers Say</h2>
-            </div>
-            <div class="grid-3">
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">"The freshness of milk from Govardhana Dairy is unmatched. Reminds me of pure home-farmed milk from my childhood."</p>
-                    <div class="reviewer">- Editable Customer Feedback</div>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">"Thick curd and pristine quality milk delivered on time every single morning in Mulbagal. Truly reliable!"</p>
-                    <div class="reviewer">- Local Resident</div>
-                </div>
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">"Super clean handling and authentic taste. We have subscribed for 3 months now and love the quality."</p>
-                    <div class="reviewer">- Satisfied Customer</div>
-                </div>
-            </div>
-            <div class="text-center review-btn-wrapper">
-                <button class="btn btn-outline-dark" onclick="alert('Review submission portal opens here.')">LEAVE A REVIEW</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact section-padding" id="contact">
-        <div class="container grid-2 align-center">
-            <div class="contact-info">
-                <span class="section-badge">GET IN TOUCH</span>
-                <h2 class="section-title">Come Visit Our Farm</h2>
-                <p class="contact-address">
-                    <strong>Govardhana Dairy Farms</strong><br>
-                    Doddathammanahalli Village,<br>
-                    Mulbagal Taluk, Kolar District,<br>
-                    Karnataka, India.
-                </p>
-                <div class="contact-actions">
-                    <a href="tel:YOUR_PHONE_NUMBER" class="btn btn-green">📞 CALL US</a>
-                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="btn btn-whatsapp">💬 WHATSAPP</a>
-                    <a href="YOUR_MAP_LINK" target="_blank" class="btn btn-outline-dark">📍 GET DIRECTIONS</a>
-                </div>
-            </div>
-            <div class="contact-img-box">
-                <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=800" alt="Govardhana Farm Location" class="contact-img">
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container grid-4">
-            <div class="footer-col brand-col">
-                <div class="logo-group">
-                    <div class="logo-badge">🌿</div>
-                    <div class="logo-text text-white">
-                        <span class="brand-title">Govardhana</span>
-                        <span class="brand-subtitle">DAIRY FARMS</span>
-                    </div>
-                </div>
-                <p>Fresh dairy products, straight from our farm to your home with uncompromised quality and care.</p>
-            </div>
-            <div class="footer-col">
-                <h4>QUICK LINKS</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#order">Order Online</a></li>
-                    <li><a href="#pay">Pay UPI</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>CONTACT</h4>
-                <p>📍 Doddathammanahalli Village, Mulbagal Taluk, Kolar, Karnataka</p>
-                <p>📞 Phone: YOUR_PHONE_NUMBER</p>
-                <p>💬 WhatsApp: YOUR_WHATSAPP_NUMBER</p>
-            </div>
-            <div class="footer-col">
-                <h4>CONNECT</h4>
-                <div class="social-links">
-                    <a href="#" class="social-icon">Instagram</a>
-                    <a href="#" class="social-icon">Facebook</a>
-                    <a href="#" class="social-icon">YouTube</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 Govardhana Dairy Farms. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <div class="cart-drawer-overlay" id="cart-overlay" onclick="closeCart()"></div>
-    <div class="cart-drawer" id="cart-drawer">
-        <div class="cart-header">
-            <h3>Your Fresh Cart 🥛</h3>
-            <button class="cart-close-btn" onclick="closeCart()">&times;</button>
-        </div>
-        <div class="cart-body" id="cart-items-container">
-            <p class="empty-msg">Your shopping cart is empty.</p>
-        </div>
-        <div class="cart-footer">
-            <div class="cart-summary-line">
-                <span>Subtotal</span>
-                <span id="cart-subtotal">₹0</span>
-            </div>
-            <div class="cart-summary-line">
-                <span>Delivery</span>
-                <span class="text-green">FREE</span>
-            </div>
-            <div class="cart-summary-line cart-total">
-                <span>Total Amount</span>
-                <span id="cart-total">₹0</span>
-            </div>
-            <a href="#order" class="btn btn-gold btn-block" onclick="closeCart()">PROCEED TO ORDER</a>
-        </div>
+    <!-- Top Announcement Bar -->
+    <div class="bg-farmDark text-white text-xs sm:text-sm py-2 px-4 text-center font-medium">
+        <span class="inline-block animate-pulse mr-2">🌿</span> Direct from Doddathammanahalli Farm to your doorstep in Mulbagal Taluk! 
+        <a href="tel:8867011865" class="underline font-bold ml-1 hover:text-earthGold">Call 8867011865</a>
     </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Brand -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full bg-farmGreen text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-cow text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="block font-serif-custom font-bold text-xl sm:text-2xl text-farmDark tracking-tight">Govardhana</span>
+                        <span class="block text-xs font-semibold text-farmGreen tracking-widest uppercase">Dairy Farms</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-farmGreen font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-farmGreen font-medium transition-colors">About</a>
+                    <a href="#products" class="text-gray-700 hover:text-farmGreen font-medium transition-colors">Products</a>
+                    <a href="#pay-upi" class="text-gray-700 hover:text-farmGreen font-medium transition-colors"><i class="fa-solid fa-qrcode text-xs mr-1"></i>Pay UPI</a>
+                    <a href="#offer" class="text-gray-700 hover:text-farmGreen font-medium transition-colors">Special Offer</a>
+                    <a href="#support" class="text-gray-700 hover:text-farmGreen font-medium transition-colors"><i class="fa-solid fa-headset text-xs mr-1"></i>Support & Reviews</a>
+                    <a href="#contact" class="text-gray-700 hover:text-farmGreen font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="tel:8867011865" class="bg-farmGreen hover:bg-farmDark text-white px-5 py-2.5 rounded-full font-semibold shadow-md flex items-center gap-2 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-phone text-sm"></i>
+                        <span>8867011865</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-farmDark p-2 focus:outline-none" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#home" class="block py-2 text-gray-700 font-medium hover:text-farmGreen mobile-link">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 font-medium hover:text-farmGreen mobile-link">About Our Farm</a>
+            <a href="#products" class="block py-2 text-gray-700 font-medium hover:text-farmGreen mobile-link">Our Products</a>
+            <a href="#pay-upi" class="block py-2 text-gray-700 font-medium hover:text-farmGreen mobile-link"><i class="fa-solid fa-qrcode text-sm mr-2 text-farmGreen"></i>Pay Online (UPI)</a>
+            <a href="#offer" class="block py-2 text-gray-700 font-medium hover:text-farmGreen mobile-link">Special Customer Offer</a>
+            <a href="#support" class="block py-2 text-gray-700 font-medium hover:text-farmGreen mobile-link"><i class="fa-solid fa-headset text-sm mr-2 text-farmGreen"></i>Support & Feedback</a>
+            <a href="#gallery" class="block py-2 text-gray-700 font-medium hover:text-farmGreen mobile-link">Farm Gallery</a>
+            <a href="#contact" class="block py-2 text-gray-700 font-medium hover:text-farmGreen mobile-link">Contact Us</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="tel:8867011865" class="bg-farmGreen text-white text-center py-3 rounded-xl font-semibold shadow flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call 8867011865 to Order
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=918867011865&text=Hello%20Govardhana%20Dairy%20Farms,%20I%20would%20like%20to%20order%20fresh%20milk/curd." target="_blank" class="bg-emerald-600 text-white text-center py-3 rounded-xl font-semibold shadow flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Order
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section id="home" class="hero-bg min-h-[90vh] flex items-center justify-center text-white py-16 px-4 relative">
+        <div class="max-w-5xl mx-auto text-center z-10">
+            <span class="inline-block bg-white/20 backdrop-blur-md text-cream px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-6 tracking-wide uppercase border border-white/30">
+                🌱 Doddathammanahalli Village • Mulbagal Taluk • Kolar
+            </span>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif-custom font-extrabold leading-tight mb-6 text-white drop-shadow-md">
+                “Fresh Milk & Curd Straight From Our Farm to Your Home”
+            </h1>
+            <p class="text-base sm:text-xl text-gray-100 max-w-2xl mx-auto mb-8 leading-relaxed font-light">
+                “Pure, fresh and wholesome dairy products from Govardhana Dairy Farms.”
+            </p>
+
+            <!-- Click-to-Call Highlight Badge -->
+            <a href="tel:8867011865" class="inline-flex items-center gap-2 bg-amber-500/90 hover:bg-amber-400 text-farmDark font-semibold px-4 py-1.5 rounded-full text-xs sm:text-sm mb-8 shadow-md transition-colors">
+                <i class="fa-solid fa-phone-volume animate-bounce"></i>
+                <span>Call us directly to book your order: <strong class="underline">8867011865</strong></span>
+            </a>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+                <a href="#products" class="w-full sm:w-auto bg-earthGold hover:bg-amber-600 text-farmDark font-bold px-8 py-4 rounded-full shadow-lg transition-all transform hover:-translate-y-1 text-center">
+                    ORDER / ENQUIRE NOW
+                </a>
+                <a href="tel:8867011865" class="w-full sm:w-auto bg-white hover:bg-gray-100 text-farmDark font-bold px-8 py-4 rounded-full shadow-lg transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-phone text-farmGreen text-lg"></i> CALL NOW TO ORDER
+                </a>
+            </div>
+            <div class="inline-flex items-center gap-3 bg-black/30 backdrop-blur-md px-6 py-3 rounded-full text-xs sm:text-sm text-gray-200 border border-white/10">
+                <span>✨ Farm Fresh</span>
+                <span>•</span>
+                <span>Quality Dairy Products</span>
+                <span>•</span>
+                <span>Trusted by Families</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. ABOUT OUR FARM -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-earthGold/20 rounded-3xl transform -rotate-2"></div>
+                    <img src="https://images.unsplash.com/photo-1527153857715-3908f2ae5e61?auto=format&fit=crop&q=80&w=800" alt="Dairy Farm in Mulbagal" class="relative rounded-2xl shadow-xl w-full h-[380px] sm:h-[450px] object-cover">
+                    <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-gray-100">
+                        <p class="font-serif-custom font-bold text-farmDark text-lg">Local & Pure</p>
+                        <p class="text-xs text-gray-600">Mulbagal Taluk, Kolar Dist.</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="text-farmGreen font-bold tracking-wider uppercase text-sm">About Our Farm</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif-custom font-bold text-farmDark mt-2 mb-6">
+                        “From Our Farm to Your Family”
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
+                        “Govardhana Dairy Farms is dedicated to providing fresh and quality milk and curd to families in our local community. We believe that good health begins with good food, and our goal is to deliver wholesome dairy products with care, cleanliness and consistency.”
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 text-sm font-medium text-gray-700">
+                        <div class="flex items-center gap-2.5 bg-cream p-3 rounded-xl border border-gray-100">
+                            <i class="fa-solid fa-check text-farmGreen"></i> Farm-fresh milk
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-cream p-3 rounded-xl border border-gray-100">
+                            <i class="fa-solid fa-check text-farmGreen"></i> Fresh curd
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-cream p-3 rounded-xl border border-gray-100">
+                            <i class="fa-solid fa-check text-farmGreen"></i> Focus on cleanliness
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-cream p-3 rounded-xl border border-gray-100">
+                            <i class="fa-solid fa-check text-farmGreen"></i> Quality production
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-cream p-3 rounded-xl border border-gray-100">
+                            <i class="fa-solid fa-check text-farmGreen"></i> Local delivery
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-cream p-3 rounded-xl border border-gray-100">
+                            <i class="fa-solid fa-check text-farmGreen"></i> Family-oriented
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. WHY CHOOSE US -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-milk">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <span class="text-farmGreen font-bold tracking-wider uppercase text-sm">Our Core Values</span>
+            <h2 class="text-3xl sm:text-4xl font-serif-custom font-bold text-farmDark mt-2">Why Choose Govardhana Dairy Farms?</h2>
+            <p class="text-gray-600 max-w-xl mx-auto mt-3">Committed to natural farming, animal welfare, and pure nourishment for every local household.</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="w-16 h-16 rounded-2xl bg-farmGreen/10 text-farmGreen flex items-center justify-center text-2xl mb-6 group-hover:bg-farmGreen group-hover:text-white transition-colors">
+                    🥛
+                </div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-3">Fresh Milk</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Pure, unadulterated cow milk delivered straight from the farm preserving all natural nutrients.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="w-16 h-16 rounded-2xl bg-farmGreen/10 text-farmGreen flex items-center justify-center text-2xl mb-6 group-hover:bg-farmGreen group-hover:text-white transition-colors">
+                    🥣
+                </div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-3">Fresh Curd</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Thick, creamy, and traditional set curd prepared under hygienic conditions in glass bottles.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="w-16 h-16 rounded-2xl bg-farmGreen/10 text-farmGreen flex items-center justify-center text-2xl mb-6 group-hover:bg-farmGreen group-hover:text-white transition-colors">
+                    🌿
+                </div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-3">Farm Fresh</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Sourced directly from our well-maintained local farm with zero middlemen or chemical additives.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="w-16 h-16 rounded-2xl bg-farmGreen/10 text-farmGreen flex items-center justify-center text-2xl mb-6 group-hover:bg-farmGreen group-hover:text-white transition-colors">
+                    🐄
+                </div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-3">Healthy Cows</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Our cows are raised with love, fed nutritious green fodder, and given utmost care and hygiene.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="w-16 h-16 rounded-2xl bg-farmGreen/10 text-farmGreen flex items-center justify-center text-2xl mb-6 group-hover:bg-farmGreen group-hover:text-white transition-colors">
+                    ✨
+                </div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-3">Quality Focused</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Rigorous quality checks at every single step from milking to bottling and packaging.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="w-16 h-16 rounded-2xl bg-farmGreen/10 text-farmGreen flex items-center justify-center text-2xl mb-6 group-hover:bg-farmGreen group-hover:text-white transition-colors">
+                    ❤️
+                </div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-3">Made With Care</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">A family-run farm deeply rooted in tradition, ensuring health and happiness for your family.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. OUR DAIRY PRODUCTS -->
+    <section id="products" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <span class="text-farmGreen font-bold tracking-wider uppercase text-sm">Wholesome & Pure</span>
+            <h2 class="text-3xl sm:text-4xl font-serif-custom font-bold text-farmDark mt-2">“Our Fresh Dairy Products”</h2>
+            <p class="text-gray-600 max-w-xl mx-auto mt-3">Choose from our daily fresh milk and traditional set curd options in pure glass bottles.</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Product 1: 1 Litre Milk -->
+            <div class="bg-cream rounded-3xl overflow-hidden shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-all">
+                <div>
+                    <div class="h-64 overflow-hidden relative bg-white flex items-center justify-center p-2">
+                        <span class="absolute top-4 right-4 bg-farmGreen text-white text-xs font-bold px-3 py-1 rounded-full z-10">Bestseller</span>
+                        <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=600" alt="1 Litre Fresh Milk Bottle" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500 rounded-2xl">
+                        <div class="absolute bottom-4 bg-farmDark/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            Govardhana Dairy Farms
+                        </div>
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-1">1 Litre Fresh Milk</h3>
+                        <p class="text-xs text-gray-500 mb-4">Hygienically bottled farm cow milk</p>
+                        <div class="text-2xl font-extrabold text-farmGreen mb-4">₹60 <span class="text-xs font-normal text-gray-500">/ litre</span></div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="openOrderModal('1 Litre Fresh Milk', '₹60')" class="w-full bg-farmDark hover:bg-farmGreen text-white py-3 rounded-xl font-semibold text-sm transition-colors shadow">
+                        Order / Enquire
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2: 500 ml Milk -->
+            <div class="bg-cream rounded-3xl overflow-hidden shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-all">
+                <div>
+                    <div class="h-64 overflow-hidden relative bg-white flex items-center justify-center p-2">
+                        <span class="absolute top-4 right-4 bg-earthGold text-farmDark text-xs font-bold px-3 py-1 rounded-full z-10">Half Litre</span>
+                        <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&q=80&w=600" alt="500 ml Fresh Milk Bottle" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500 rounded-2xl">
+                        <div class="absolute bottom-4 bg-farmDark/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            Govardhana Dairy Farms
+                        </div>
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-1">500 ml Fresh Milk</h3>
+                        <p class="text-xs text-gray-500 mb-4">Branded bottle for small families</p>
+                        <div class="text-2xl font-extrabold text-farmGreen mb-4">₹30 <span class="text-xs font-normal text-gray-500">/ 500 ml</span></div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="openOrderModal('500 ml Fresh Milk', '₹30')" class="w-full bg-farmDark hover:bg-farmGreen text-white py-3 rounded-xl font-semibold text-sm transition-colors shadow">
+                        Order / Enquire
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3: 1 Litre Curd -->
+            <div class="bg-cream rounded-3xl overflow-hidden shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-all">
+                <div>
+                    <div class="h-64 overflow-hidden relative bg-white flex items-center justify-center p-2">
+                        <span class="absolute top-4 right-4 bg-earthGold text-farmDark text-xs font-bold px-3 py-1 rounded-full z-10">Glass Bottle</span>
+                        <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&q=80&w=600" alt="1 Litre Fresh Curd Glass Bottle" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500 rounded-2xl">
+                        <div class="absolute bottom-4 bg-farmDark/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            Govardhana Dairy Farms
+                        </div>
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-1">1 Litre Fresh Curd</h3>
+                        <p class="text-xs text-gray-500 mb-4">Thick set curd in transparent glass bottle</p>
+                        <div class="text-2xl font-extrabold text-farmGreen mb-4">₹70 <span class="text-xs font-normal text-gray-500">/ litre</span></div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="openOrderModal('1 Litre Fresh Curd', '₹70')" class="w-full bg-farmDark hover:bg-farmGreen text-white py-3 rounded-xl font-semibold text-sm transition-colors shadow">
+                        Order / Enquire
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 4: 500 ml Curd -->
+            <div class="bg-cream rounded-3xl overflow-hidden shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-xl transition-all">
+                <div>
+                    <div class="h-64 overflow-hidden relative bg-white flex items-center justify-center p-2">
+                        <span class="absolute top-4 right-4 bg-earthGold text-farmDark text-xs font-bold px-3 py-1 rounded-full z-10">Glass Bottle</span>
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=600" alt="500 ml Fresh Curd Glass Bottle" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500 rounded-2xl">
+                        <div class="absolute bottom-4 bg-farmDark/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            Govardhana Dairy Farms
+                        </div>
+                    </div>
+                    <div class="p-6 text-left">
+                        <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-1">500 ml Fresh Curd</h3>
+                        <p class="text-xs text-gray-500 mb-4">Rich & creamy curd in glass bottle</p>
+                        <div class="text-2xl font-extrabold text-farmGreen mb-4">₹35 <span class="text-xs font-normal text-gray-500">/ 500 ml</span></div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6">
+                    <button onclick="openOrderModal('500 ml Fresh Curd', '₹35')" class="w-full bg-farmDark hover:bg-farmGreen text-white py-3 rounded-xl font-semibold text-sm transition-colors shadow">
+                        Order / Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SPECIAL CUSTOMER OFFER -->
+    <section id="offer" class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-farmDark to-farmGreen text-white relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 opacity-10 text-9xl">
+            <i class="fa-solid fa-gift"></i>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="bg-earthGold text-farmDark font-bold px-4 py-1.5 rounded-full text-xs sm:text-sm uppercase tracking-wider inline-block mb-4 shadow">
+                Exclusive Loyalty Benefit
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-serif-custom font-extrabold mb-4">
+                “Special Service for Our Regular Customers”
+            </h2>
+            <p class="text-lg sm:text-2xl text-amber-100 font-medium mb-8">
+                “Every Second & Fourth Saturday — Free Service for Our Regular Customers!”
+            </p>
+            <div class="flex flex-wrap justify-center gap-6 mb-8">
+                <div class="bg-white/10 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/20 flex items-center gap-3">
+                    <i class="fa-solid fa-calendar-days text-earthGold text-2xl"></i>
+                    <div class="text-left">
+                        <span class="block text-xs text-gray-300">Scheduled Date</span>
+                        <span class="font-bold text-lg">Every 2nd Saturday</span>
+                    </div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/20 flex items-center gap-3">
+                    <i class="fa-solid fa-calendar-days text-earthGold text-2xl"></i>
+                    <div class="text-left">
+                        <span class="block text-xs text-gray-300">Scheduled Date</span>
+                        <span class="font-bold text-lg">Every 4th Saturday</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm text-gray-200 max-w-xl mx-auto">
+                We deeply appreciate our loyal patrons in Mulbagal Taluk. Enjoy our exclusive complimentary farm service designed specially for our regular monthly subscribers.
+            </p>
+        </div>
+    </section>
+
+    <!-- 6. FARM GALLERY -->
+    <section id="gallery" class="py-20 px-4 sm:px-6 lg:px-8 bg-milk">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <span class="text-farmGreen font-bold tracking-wider uppercase text-sm">Visual Journey</span>
+            <h2 class="text-3xl sm:text-4xl font-serif-custom font-bold text-farmDark mt-2">Farm Gallery</h2>
+            <p class="text-gray-600 max-w-xl mx-auto mt-3">A glimpse into our serene dairy farm, healthy cows, and pristine daily production process.</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="overflow-hidden rounded-2xl shadow group h-48 sm:h-60">
+                <img src="https://images.unsplash.com/photo-1546445317-29f4551e98d7?auto=format&fit=crop&q=80&w=600" alt="Dairy Cows" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow group h-48 sm:h-60">
+                <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&q=80&w=600" alt="Farm Surroundings" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow group h-48 sm:h-60">
+                <img src="https://images.unsplash.com/photo-1599839575945-a9e5af0c3fae?auto=format&fit=crop&q=80&w=600" alt="Green Grassland" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow group h-48 sm:h-60">
+                <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=600" alt="Fresh Milk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow group h-48 sm:h-60">
+                <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&q=80&w=600" alt="Milk Bottles" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow group h-48 sm:h-60">
+                <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&q=80&w=600" alt="Fresh Curd Glass Bottle" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow group h-48 sm:h-60">
+                <img src="https://images.unsplash.com/photo-1570158268183-d296b2892211?auto=format&fit=crop&q=80&w=600" alt="Farm Activity" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-2xl shadow group h-48 sm:h-60">
+                <img src="https://images.unsplash.com/photo-1527153857715-3908f2ae5e61?auto=format&fit=crop&q=80&w=600" alt="Happy Dairy Cow" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. OUR PROMISE -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <span class="text-farmGreen font-bold tracking-wider uppercase text-sm">Commitment to Excellence</span>
+            <h2 class="text-3xl sm:text-4xl font-serif-custom font-bold text-farmDark mt-2">“Our Promise to You”</h2>
+            <p class="text-gray-600 max-w-xl mx-auto mt-3">The four pillars that define our daily operations and customer relationships.</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-cream p-8 rounded-3xl border border-gray-100 text-center shadow-sm">
+                <div class="w-14 h-14 bg-farmGreen text-white rounded-2xl flex items-center justify-center text-xl mx-auto mb-6 shadow">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-2">Freshness</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">We strive to provide fresh milk and curd for your family every single morning.</p>
+            </div>
+            <div class="bg-cream p-8 rounded-3xl border border-gray-100 text-center shadow-sm">
+                <div class="w-14 h-14 bg-farmGreen text-white rounded-2xl flex items-center justify-center text-xl mx-auto mb-6 shadow">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-2">Quality</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">We focus on maintaining uncompromising quality throughout our entire milking and delivery process.</p>
+            </div>
+            <div class="bg-cream p-8 rounded-3xl border border-gray-100 text-center shadow-sm">
+                <div class="w-14 h-14 bg-farmGreen text-white rounded-2xl flex items-center justify-center text-xl mx-auto mb-6 shadow">
+                    <i class="fa-solid fa-hand-holding-droplet"></i>
+                </div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-2">Cleanliness</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Clean handling and hygienic bottling practices are paramount to our farm standards.</p>
+            </div>
+            <div class="bg-cream p-8 rounded-3xl border border-gray-100 text-center shadow-sm">
+                <div class="w-14 h-14 bg-farmGreen text-white rounded-2xl flex items-center justify-center text-xl mx-auto mb-6 shadow">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-2">Trust</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">We believe long-term customer relationships in our community are built on absolute trust.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. HOW TO ORDER -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-milk">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <span class="text-farmGreen font-bold tracking-wider uppercase text-sm">Simple & Quick</span>
+            <h2 class="text-3xl sm:text-4xl font-serif-custom font-bold text-farmDark mt-2">How to Order</h2>
+            <p class="text-gray-600 max-w-xl mx-auto mt-3">Get farm-fresh dairy products at your doorstep in 3 easy steps.</p>
+        </div>
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center relative">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-earthGold text-farmDark font-bold flex items-center justify-center text-sm shadow">1</div>
+                <div class="text-4xl mb-4 mt-2">📞</div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-2">Contact Us</h3>
+                <p class="text-gray-600 text-sm mb-3">Call or message us directly at <a href="tel:8867011865" class="font-semibold text-farmGreen underline">8867011865</a>.</p>
+                <a href="tel:8867011865" class="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-farmGreen hover:bg-farmDark px-4 py-2 rounded-full transition-colors shadow">
+                    <i class="fa-solid fa-phone"></i> Call Now to Order
+                </a>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center relative">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-earthGold text-farmDark font-bold flex items-center justify-center text-sm shadow">2</div>
+                <div class="text-4xl mb-4 mt-2">🥛</div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-2">Choose Your Product</h3>
+                <p class="text-gray-600 text-sm">Select fresh milk or curd in 1 litre or 500 ml bottles according to your daily need.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center relative">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-earthGold text-farmDark font-bold flex items-center justify-center text-sm shadow">3</div>
+                <div class="text-4xl mb-4 mt-2">🏡</div>
+                <h3 class="font-serif-custom font-bold text-xl text-farmDark mb-2">Get Your Fresh Products</h3>
+                <p class="text-gray-600 text-sm">Receive fresh, wholesome dairy products directly from Govardhana Dairy Farms.</p>
+            </div>
+        </div>
+        <!-- WhatsApp & Call Action Group -->
+        <div class="max-w-2xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 text-center">
+            <a href="tel:8867011865" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-farmGreen hover:bg-farmDark text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all transform hover:-translate-y-1 text-base">
+                <i class="fa-solid fa-phone text-xl"></i>
+                <span>Call 8867011865 to Order</span>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=918867011865&text=Hello%20Govardhana%20Dairy%20Farms,%20I%20would%20like%20to%20order%20fresh%20milk/curd." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-8 py-4 rounded-full shadow-lg transition-all transform hover:-translate-y-1 text-base">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                <span>Order via WhatsApp</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 8.5 ONLINE UPI PAYMENT SECTION -->
+    <section id="pay-upi" class="py-20 px-4 sm:px-6 lg:px-8 bg-white border-t border-b border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="bg-amber-100 text-earthBrown font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider inline-block mb-3">
+                    Fast & Convenient
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-serif-custom font-bold text-farmDark">Online Payment</h2>
+                <p class="text-gray-600 max-w-xl mx-auto mt-2 text-sm sm:text-base">
+                    Enter your amount and tap <strong>Pay Now</strong>. Your phone will present your installed UPI payment apps (Google Pay, PhonePe, Paytm, BHIM, etc.) with the payment details pre-filled. Complete your transaction securely inside your selected UPI app.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-cream rounded-3xl p-6 sm:p-10 shadow-lg border border-gray-200/80 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Left Column: Payment Form -->
+                <div class="lg:col-span-7 space-y-5">
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 space-y-4 shadow-sm">
+                        <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+                            <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Payee Name</span>
+                            <span class="font-bold text-farmDark text-sm">Govardhana Dairy Farms</span>
+                        </div>
+
+                        <!-- Amount Input -->
+                        <div>
+                            <label for="upiAmount" class="block text-xs font-semibold text-gray-700 uppercase mb-1">
+                                Enter Amount (₹) <span class="text-red-500">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-farmGreen text-lg">₹</span>
+                                <input type="number" id="upiAmount" step="any" min="1" placeholder="Enter amount in ₹" oninput="validateUPIAmount()" class="w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-farmGreen font-bold text-lg text-farmDark bg-gray-50 focus:bg-white transition-colors">
+                            </div>
+                            <p id="upiAmountError" class="hidden text-xs text-red-600 mt-1 font-medium"></p>
+                        </div>
+
+                        <!-- Optional Note / Reference -->
+                        <div>
+                            <label for="upiNote" class="block text-xs font-semibold text-gray-700 uppercase mb-1">
+                                Order No. / Reference Note <span class="text-gray-400 font-normal">(Optional)</span>
+                            </label>
+                            <input type="text" id="upiNote" oninput="updateUPISummary()" placeholder="e.g. Daily Milk Payment / ORD-102" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-farmGreen text-sm bg-gray-50 focus:bg-white transition-colors">
+                        </div>
+                    </div>
+
+                    <!-- Pay Now Action Button -->
+                    <div class="space-y-3">
+                        <button id="payNowBtn" onclick="payWithUPIApp()" disabled class="w-full bg-farmGreen text-white font-bold py-4 px-6 rounded-2xl shadow-lg transition-all flex items-center justify-center gap-3 text-base opacity-50 cursor-not-allowed">
+                            <i class="fa-solid fa-bolt text-amber-300 text-lg"></i>
+                            <span>Pay Now</span>
+                        </button>
+                        
+                        <p class="text-xs text-gray-500 text-center leading-relaxed">
+                            🔒 Payment is completed securely inside your selected UPI app. Govardhana Dairy Farms never sees or stores your UPI PIN or banking details.
+                        </p>
+
+                        <!-- App Launch Guidance Banner (Appears after clicking Pay Now) -->
+                        <div id="upiStatusNotice" class="hidden bg-amber-50 border border-amber-300 rounded-2xl p-4 text-xs text-amber-900 space-y-1">
+                            <p class="font-bold flex items-center gap-1.5 text-amber-800">
+                                <i class="fa-solid fa-circle-info text-amber-600"></i> Opening UPI Payment App...
+                            </p>
+                            <p>UPI payment is available on compatible mobile devices. If your app does not launch, please verify you are using a mobile browser with Google Pay, PhonePe, Paytm, or BHIM installed, or use the UPI ID / QR code on the right.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: UPI ID & QR Code Fallback -->
+                <div class="lg:col-span-5 flex flex-col items-center justify-center bg-white p-6 rounded-2xl border border-gray-200 text-center shadow-sm">
+                    <span class="text-xs font-bold uppercase tracking-wider text-farmDark mb-2">Scan QR Code or Copy UPI ID</span>
+                    
+                    <div class="bg-white p-3 rounded-xl border-2 border-farmGreen/30 shadow-inner mb-3">
+                        <img id="upiQrCodeImg" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi%3A%2F%2Fpay%3Fpa%3DYOUR_REAL_UPI_ID_HERE%26pn%3DGovardhana%2520Dairy%2520Farms%26cu%3DINR" alt="UPI Payment QR Code" class="w-44 h-44 sm:w-48 sm:h-48 object-contain mx-auto">
+                    </div>
+
+                    <div class="w-full bg-cream p-2.5 rounded-xl border border-gray-200 mb-3 flex items-center justify-between">
+                        <span id="merchantUpiDisplay" class="font-mono text-xs font-bold text-farmDark truncate max-w-[170px]">YOUR_REAL_UPI_ID_HERE</span>
+                        <button onclick="copyUPIId()" class="bg-white hover:bg-farmGreen hover:text-white text-gray-700 px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-200 transition-colors shrink-0">
+                            <span id="copyBtnText">Copy</span>
+                        </button>
+                    </div>
+
+                    <p class="text-[11px] text-gray-500 leading-tight">
+                        UPI payment is available on compatible mobile devices. You can also use the UPI ID or QR code above.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8.6 CUSTOMER SUPPORT, COMPLAINTS & FEEDBACK SECTION -->
+    <section id="support" class="py-20 px-4 sm:px-6 lg:px-8 bg-milk">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-farmGreen font-bold tracking-wider uppercase text-sm">We Care About You</span>
+                <h2 class="text-3xl sm:text-4xl font-serif-custom font-bold text-farmDark mt-1">Customer Support & Feedback</h2>
+                <p class="text-gray-600 max-w-xl mx-auto mt-2 text-sm sm:text-base">
+                    Have an issue with your delivery or want to leave a review? We value your honest experience!
+                </p>
+            </div>
+
+            <!-- Urgent Call Banner -->
+            <div class="max-w-4xl mx-auto mb-8 bg-emerald-900 text-white rounded-2xl p-4 sm:p-5 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-amber-400 text-farmDark flex items-center justify-center font-bold shrink-0">
+                        <i class="fa-solid fa-headset text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-sm sm:text-base">Need Urgent Resolution for Today's Milk Delivery?</p>
+                        <p class="text-xs text-emerald-200">Call our farm owner directly for immediate helpline assistance.</p>
+                    </div>
+                </div>
+                <a href="tel:8867011865" class="bg-white hover:bg-earthGold text-farmDark font-bold px-5 py-2.5 rounded-full text-xs sm:text-sm shadow transition-colors shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-farmGreen"></i> Call Support Now
+                </a>
+            </div>
+
+            <!-- Tab Switching Header -->
+            <div class="max-w-4xl mx-auto mb-6 flex justify-center border-b border-gray-200">
+                <button id="tabBtnComplaint" onclick="switchSupportTab('complaint')" class="px-6 py-3 font-bold text-sm border-b-2 border-farmGreen text-farmGreen transition-colors focus:outline-none flex items-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span>Log an Issue / Complaint</span>
+                </button>
+                <button id="tabBtnReview" onclick="switchSupportTab('review')" class="px-6 py-3 font-bold text-sm border-b-2 border-transparent text-gray-500 hover:text-farmGreen transition-colors focus:outline-none flex items-center gap-2">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Submit Rating & Review</span>
+                </button>
+            </div>
+
+            <!-- Form Container -->
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-10 shadow-lg border border-gray-100">
+                
+                <!-- TAB 1: ISSUE / COMPLAINT FORM -->
+                <div id="supportComplaintTab" class="space-y-6">
+                    <div>
+                        <h3 class="font-serif-custom font-bold text-2xl text-farmDark">File a Customer Complaint</h3>
+                        <p class="text-xs text-gray-500 mt-1">Please describe your problem so we can fix it immediately.</p>
+                    </div>
+
+                    <form id="complaintForm" onsubmit="handleComplaintSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">Issue Category <span class="text-red-500">*</span></label>
+                                <select id="compCategory" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-farmGreen text-sm bg-gray-50 focus:bg-white">
+                                    <option value="" disabled selected>Select issue type...</option>
+                                    <option value="Product Quality">Product Quality (e.g. Milk sour, Curd thickness)</option>
+                                    <option value="Delivery Delay">Delivery (Late morning delivery or missed day)</option>
+                                    <option value="Order Issue">Order Issue (Wrong quantity or packaging)</option>
+                                    <option value="Payment Issue">Payment Issue (UPI or billing discrepancy)</option>
+                                    <option value="Other">Other Query / Feedback</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">Order / Ref ID (Optional)</label>
+                                <input type="text" id="compOrderNo" placeholder="e.g. ORD-1029 or Date" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-farmGreen text-sm bg-gray-50 focus:bg-white">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">Your Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="compName" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-farmGreen text-sm bg-gray-50 focus:bg-white">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">Phone Number <span class="text-red-500">*</span></label>
+                                <input type="tel" id="compPhone" pattern="[0-9]{10}" required placeholder="10-digit mobile number" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-farmGreen text-sm bg-gray-50 focus:bg-white">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">Describe the Issue <span class="text-red-500">*</span></label>
+                            <textarea id="compDescription" rows="4" required placeholder="Please provide details about what went wrong..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-farmGreen text-sm bg-gray-50 focus:bg-white"></textarea>
+                        </div>
+
+                        <div id="compErrorMsg" class="hidden text-xs text-red-600 bg-red-50 p-3 rounded-xl border border-red-200"></div>
+
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+                            <button type="submit" class="w-full sm:w-auto bg-farmDark hover:bg-farmGreen text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-colors shadow">
+                                Submit Complaint Ticket
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- TAB 2: PRODUCT RATING & REVIEW FORM -->
+                <div id="supportReviewTab" class="hidden space-y-6">
+                    <div>
+                        <h3 class="font-serif-custom font-bold text-2xl text-farmDark">Rate & Review Our Dairy Products</h3>
+                        <p class="text-xs text-gray-500 mt-1">Share your feedback to help us serve Doddathammanahalli & Mulbagal better.</p>
+                    </div>
+
+                    <form id="reviewForm" onsubmit="handleReviewSubmit(event)" class="space-y-5">
+                        <div class="bg-cream p-5 rounded-2xl border border-gray-200/80 text-center space-y-2">
+                            <label class="block text-xs font-bold text-gray-700 uppercase">Your Overall Rating <span class="text-red-500">*</span></label>
+                            <div class="flex justify-center gap-2 text-2xl sm:text-3xl text-gray-300 cursor-pointer" id="starRatingContainer">
+                                <i class="fa-solid fa-star star-icon hover:text-amber-400 transition-colors" data-rating="1" onclick="setRating(1)"></i>
+                                <i class="fa-solid fa-star star-icon hover:text-amber-400 transition-colors" data-rating="2" onclick="setRating(2)"></i>
+                                <i class="fa-solid fa-star star-icon hover:text-amber-400 transition-colors" data-rating="3" onclick="setRating(3)"></i>
+                                <i class="fa-solid fa-star star-icon hover:text-amber-400 transition-colors" data-rating="4" onclick="setRating(4)"></i>
+                                <i class="fa-solid fa-star star-icon hover:text-amber-400 transition-colors" data-rating="5" onclick="setRating(5)"></i>
+                            </div>
+                            <span id="starRatingLabel" class="text-xs font-bold text-earthBrown block">Select a star rating (1 to 5)</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">Your Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="revName" required placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-farmGreen text-sm bg-gray-50 focus:bg-white">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">Phone Number <span class="text-red-500">*</span></label>
+                                <input type="tel" id="revPhone" pattern="[0-9]{10}" required placeholder="10-digit mobile number" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-farmGreen text-sm bg-gray-50 focus:bg-white">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">Product Reviewed</label>
+                            <select id="revProduct" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-farmGreen text-sm bg-gray-50 focus:bg-white">
+                                <option value="Govardhana Fresh Milk">Govardhana Fresh Milk</option>
+                                <option value="Govardhana Fresh Curd Glass Bottle">Govardhana Fresh Curd (Glass Bottle)</option>
+                                <option value="Overall Service & Delivery">Overall Service & Delivery</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 uppercase mb-1">Written Feedback / Review <span class="text-red-500">*</span></label>
+                            <textarea id="revComment" rows="3" required placeholder="Tell us what you liked about our taste, purity, or delivery..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-farmGreen text-sm bg-gray-50 focus:bg-white"></textarea>
+                        </div>
+
+                        <div id="revErrorMsg" class="hidden text-xs text-red-600 bg-red-50 p-3 rounded-xl border border-red-200"></div>
+
+                        <div class="pt-2">
+                            <button type="submit" class="w-full sm:w-auto bg-farmGreen hover:bg-farmDark text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-colors shadow">
+                                Submit Review
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Live Submissions List -->
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-gray-500">Recent Customer Activity</span>
+                        <span class="text-[10px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded font-mono">Session Log</span>
+                    </div>
+                    <div id="recentActivityList" class="space-y-2 text-xs text-gray-600">
+                        <div class="bg-gray-50 p-3 rounded-xl flex justify-between items-center">
+                            <span><strong class="text-gray-800">Sample Review:</strong> "Very fresh milk delivered daily." — Ratings: ★★★★★</span>
+                            <span class="text-[10px] text-gray-400">Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. CONTACT SECTION -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-milk">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+                <div class="p-8 sm:p-12 flex flex-col justify-between">
+                    <div>
+                        <span class="text-farmGreen font-bold tracking-wider uppercase text-sm">Get In Touch</span>
+                        <h2 class="text-3xl sm:text-4xl font-serif-custom font-bold text-farmDark mt-2 mb-6">
+                            Get Fresh Dairy Products From Govardhana Dairy Farms
+                        </h2>
+                        
+                        <div class="space-y-6 mb-8 text-gray-700">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-farmGreen/10 text-farmGreen flex items-center justify-center shrink-0 text-xl">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-farmDark">Farm Location</p>
+                                    <p class="text-sm text-gray-600">Doddathammanahalli Village, Mulbagal Taluk, Kolar District, Karnataka, India</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-farmGreen/10 text-farmGreen flex items-center justify-center shrink-0 text-xl">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-farmDark">Phone / WhatsApp</p>
+                                    <a href="tel:8867011865" class="text-sm text-farmGreen font-semibold hover:underline">8867011865</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-2xl bg-farmGreen/10 text-farmGreen flex items-center justify-center shrink-0 text-xl">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-farmDark">Pricing Summary</p>
+                                    <p class="text-xs text-gray-600 mt-1">🥛 Milk — 1 Litre ₹60 | 500 ml ₹30</p>
+                                    <p class="text-xs text-gray-600 mt-0.5">🥣 Curd — 1 Litre ₹70 | 500 ml ₹35</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 pt-4 border-t border-gray-100">
+                        <a href="tel:8867011865" class="bg-farmGreen hover:bg-farmDark text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow transition-all">
+                            <i class="fa-solid fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=918867011865&text=Hello%20Govardhana%20Dairy%20Farms,%20I%20would%20like%20to%20order%20fresh%20milk/curd." target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 shadow transition-all">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us
+                        </a>
+                        <a href="https://maps.google.com/?q=Doddathammanahalli+Mulbagal+Kolar" target="_blank" class="bg-gray-100 hover:bg-gray-200 text-farmDark px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all">
+                            <i class="fa-solid fa-map-location-dot"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-farmDark text-white p-8 sm:p-12 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#40916C_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                    <div class="relative z-10">
+                        <span class="text-earthGold font-bold text-xs uppercase tracking-widest">Local Reach</span>
+                        <h3 class="font-serif-custom font-bold text-2xl sm:text-3xl mt-2 mb-4">Serving Mulbagal & Surrounding Villages</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            We take pride in serving wholesome dairy to every household in Doddathammanahalli, Mulbagal Taluk, and nearby areas in Kolar District. Reach out today to start your daily fresh milk delivery!
+                        </p>
+                    </div>
+                    <div class="relative z-10 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fa-solid fa-clock text-earthGold"></i>
+                            <span class="font-bold text-sm">Delivery Timings</span>
+                        </div>
+                        <p class="text-xs text-gray-300">Morning & Evening fresh deliveries available daily.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer class="bg-farmDark text-gray-300 pt-16 pb-12 border-t border-emerald-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-farmGreen text-white flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-cow"></i>
+                        </div>
+                        <span class="font-serif-custom font-bold text-xl text-white">Govardhana</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mb-4 leading-relaxed">
+                        “Pure Milk. Pure Health. From Our Farm to Your Home.”
+                    </p>
+                    <p class="text-xs text-gray-400">
+                        Doddathammanahalli Village, Mulbagal Taluk, Kolar District, Karnataka, India
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-serif-custom font-bold text-white text-base mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text
